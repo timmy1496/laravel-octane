@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  octane:
+    build:
+      context: docker
+      dockerfile: development/php-swoole/Dockerfile
+    volumes:
+      - ./api:/app
+    ports:
+    - "8000:8000"
